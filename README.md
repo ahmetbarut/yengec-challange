@@ -28,7 +28,7 @@ Bu aşamada bilgisayarınızda docker'in kurulu olması, açık olması ve termi
 DB_CONNECTION=sqlite # sqlite, mysql, pgsql, sqlsrv
 DB_HOST=mysql # 127.0.0.1
 DB_PORT=3306 # 3306, 5432, 1433
-# DB_DATABASE=yengec_challange # mysql, pgsql, sqlsrv, sqlite
+DB_DATABASE=yengec_challange # mysql, pgsql, sqlsrv, sqlite
 DB_USERNAME=sail # root
 DB_PASSWORD=password 
 ```
