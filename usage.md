@@ -25,7 +25,7 @@ Projenin endpointleri aşağıdaki gibidir:
 Bu endpoint, yeni bir kullanıcı oluşturmak için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
 `POST BASE_URL/api/register`**Request**
 
-```
+```json
 {
     "name": "string",
     "email": "string",
@@ -37,7 +37,7 @@ Bu endpoint, yeni bir kullanıcı oluşturmak için kullanılır. Başarılı du
 
 **Response** *201*
 
-```
+```json
 {
     "access_token": "string"
 }
@@ -51,7 +51,7 @@ Başarılı olması durumunda `access_token`'ı alacaksınız. Bu token ile diğ
 Bu endpoint, kullanıcı girişi yapmak için kullanılır. Başarılı durumlarda 200 dönerken başarısız durumlarda 422 döner.
 `POST BASE_URL/api/login`**Request**
 
-```
+```json
 {
     "email": "string",
     "password": "string"
@@ -61,7 +61,7 @@ Bu endpoint, kullanıcı girişi yapmak için kullanılır. Başarılı durumlar
 
 **Response***200*
 
-```
+```json
 {
     "access_token": "string"
 }
@@ -73,7 +73,7 @@ Bu endpoint, kullanıcı girişi yapmak için kullanılır. Başarılı durumlar
 Bu endpoint, yeni bir entegrasyon eklemek için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
 `POST BASE_URL/api/integrations`**Request**
 
-```
+```json
 {
     "marketpalce": "string",
     "name": "string",
@@ -84,7 +84,7 @@ Bu endpoint, yeni bir entegrasyon eklemek için kullanılır. Başarılı duruml
 
 **Response** *201*
 
-```
+```json
 {
     "name": "string",
     "marketplace": "string",
@@ -101,7 +101,7 @@ Bu endpoint, yeni bir entegrasyon eklemek için kullanılır. Başarılı duruml
 Bu endpoint, entegrasyon güncellemek için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
 `PUT BASE_URL/api/integrations/{id}`**Request**
 
-```
+```json
 {
     "marketpalce": "string",
     "name": "string",
@@ -112,7 +112,7 @@ Bu endpoint, entegrasyon güncellemek için kullanılır. Başarılı durumlarda
 
 **Response***201*
 
-```
+```json
 {
     "name": "string",
     "marketplace": "string",
@@ -128,24 +128,6 @@ Bu endpoint, entegrasyon güncellemek için kullanılır. Başarılı durumlarda
 
 Bu endpoint, entegrasyon silmek için kullanılır. Başarılı durumlarda 204 dönerken başarısız durumlarda 422 döner.
 `DELETE BASE_URL/api/integrations/{id}`**Response***204*
-
-## Commandlar
-
-Projenin bir diğer özelliği de entegrasyon ekleyen, çıkaran ve güncelleyen bir komut dosyası oluşturulmalıdır.
-
-## Testler
-
-API testleri, unit testleri ve command testleri olmak üzere üç farklı kategoride testler oluşturulmalıdır. API testleri için Register servisinde girilen email adresi email adresi değilse hata verilmeli ve gerekli alanlardan name alanı girilmediğinde hata verilmeli. Unit testleri için entegrasyon ekleme, silme ve güncelleme işlemleri test edilmelidir. Command testleri ise entegrasyon ekleyen, çıkaran ve güncelleyen komut dosyası için oluşturulmalıdır.
-
-## Postman
-
-Proje için Postman API dökümanı hazırlanmalıdır. Ayrıca, Postman Collection hazırlanmalıdır.
-
-## Kurulum
-
-Son olarak, proje için bir kurulum klavuzu hazırlanmalıdır. Bu klavuz, projeyi kullanacak kişilerin proje kodunu nasıl çalıştıracağına dair detaylı bilgiler içermelidir.
-
-Sonuç olarak, projenin başarılı bir şekilde tamamlanabilmesi için öncelikle ön koşulların ve testlerin tamamının dikkatle incelenmesi gerekmektedir. Ayrıca, API dökümanı, Postman Collection ve kurulum klavuzu gibi ilgili dokümantasyonlar hazırlanmalıdır.
 
 ## Komutlar
 
