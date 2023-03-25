@@ -38,7 +38,7 @@ class RegisterTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->post(
+        $response = $this->postJson(
             '/api/register',
             [
                 'name' => 'John Doe',
@@ -46,9 +46,6 @@ class RegisterTest extends TestCase
                 'password' => 'password',
                 'password_confirmation' => 'password',
             ],
-            [
-                'Accept' => 'application/json',
-            ]
         );
 
         $response->assertStatus(422);
@@ -66,16 +63,13 @@ class RegisterTest extends TestCase
      */
     public function testRegister(): string
     {
-        $response = $this->post(
+        $response = $this->postJson(
             '/api/register',
             [
                 'name' => 'John Doe',
                 'email' => 'email_test@email.com',
                 'password' => 'password',
                 'password_confirmation' => 'password',
-            ],
-            [
-                'Accept' => 'application/json',
             ]
         );
 
@@ -89,20 +83,4 @@ class RegisterTest extends TestCase
 
         return $token;
     }
-
-/**
- * @depends testRegister
- */
-// public function testLogin(string $token): void
-// {
-//     $response = $this->post(
-//         '/api/login',
-//         [
-//             'email' => 'email_test@email.com',
-//             'password' => 'password',
-//         ]
-//     );
-
-//     $response->assertStatus(200);
-// }
 }

@@ -42,7 +42,7 @@ class UpdateIntegration extends Command
             if (!is_numeric($choice)) {
                 $this->error('Integration ID only number');
 
-                return 1;
+                return Command::FAILURE;
             }
 
         } else {
@@ -54,7 +54,7 @@ class UpdateIntegration extends Command
         if (!$integration) {
             $this->error('Integration not found');
 
-            return 1;
+            return Command::FAILURE;
         }
 
         $name = $this->ask('Name', $integration->name);
@@ -75,13 +75,13 @@ class UpdateIntegration extends Command
         }catch (\Exception $exception){
             $this->error($exception->getMessage());
 
-            return 1;
+            return Command::FAILURE;
         }
 
         $this->info('Integration updated');
 
         $this->table(['id', 'name', 'marketplace'], [$integration->only(['id','name', 'marketplace'])]);
 
-        return 0;
+        return Command::SUCCESS;
     }
 }

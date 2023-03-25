@@ -12,19 +12,16 @@ class LoginTest extends TestCase
     /**
      * A basic feature test example.
      */
-    public function testFailedValidation(): User
+    public function testFailedValidation(): void
     {
         $user = User::factory()->create([
             'password' => bcrypt('password'),
         ]);
 
-        $response = $this->post('/api/login', [
+        $response = $this->postJson('/api/login', [
             'email' => $user->email . 'wrong',
             'password' => 'wrong-password',
-        ],
-            [
-                'Accept' => 'application/json',
-            ]
+        ]
         );
 
         $response->assertStatus(422);
@@ -34,25 +31,19 @@ class LoginTest extends TestCase
                 'email',
             ],
         ]);
-
-        return $user;
     }
 
     /**
-     * @depends testFailedValidation
      */
-    public function testLoginSuccessful(User $user): void
+    public function testLoginSuccessful(): void
     {
         $user = User::factory()->create([
             'password' => bcrypt('password'),
         ]);
 
-        $response = $this->post('/api/login', [
+        $response = $this->postJson('/api/login', [
             'email' => $user->email,
             'password' => 'password',
-        ],
-            [
-                'Accept' => 'application/json',
             ]
         );
 
@@ -65,7 +56,6 @@ class LoginTest extends TestCase
     }
 
     /**
-     * @depends testLoginSuccessful
      */
     public function testLoginSuccessfulWithToken(): void
     {
