@@ -72,7 +72,7 @@ class IntegrationTest extends TestCase
             'name' => 'test',
         ]);
 
-        $response->assertStatus(204);
+        $response->assertStatus(201);
 
         $this->assertDatabaseHas('integrations', [
             'marketplace' => 'n11',
@@ -138,7 +138,7 @@ class IntegrationTest extends TestCase
 
         $response = $this->actingAs($user, 'api')->deleteJson('/api/integrations/' . $integration->id);
 
-        $response->assertStatus(204);
+        $response->assertStatus(201);
 
         $this->assertDatabaseMissing('integrations', [
             'id' => $integration->id,

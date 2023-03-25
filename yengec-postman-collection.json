@@ -1,0 +1,757 @@
+{
+	"info": {
+		"_postman_id": "c4154799-423d-4f40-a90b-94b98d452a92",
+		"name": "Yengeç",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12296633"
+	},
+	"item": [
+		{
+			"name": "Integration",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hello World\",\n    \"marketplace\": \"n11\",\n    \"password\": \"12345\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/integrations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"integrations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Hello World\",\n    \"marketplace\": \"n11\",\n    \"password\": \"12345\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/integrations",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"integrations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Mar 2023 02:57:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Mar 2023 02:57:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Hello World\",\n        \"marketplace\": \"n11\",\n        \"user_id\": 12,\n        \"updated_at\": \"2023-03-25T02:57:25.000000Z\",\n        \"created_at\": \"2023-03-25T02:57:25.000000Z\",\n        \"id\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"marketplace\": \"trendyol\",\n    \"name\": \"Güncel\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/integrations/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"integrations",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"marketplace\": \"trendyol\",\n    \"name\": \"Güncel\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/integrations/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"integrations",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Mar 2023 02:59:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Mar 2023 02:59:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Integration updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Destroy",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/integrations/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"integrations",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Destroy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/integrations/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"integrations",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Mar 2023 03:00:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Mar 2023 03:00:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Integration deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 02:55:58 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 02:55:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 12,\n    \"name\": \"Ahmet Barut\",\n    \"email\": \"ahmetb2@f.cp\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2023-03-25T02:53:36.000000Z\",\n    \"updated_at\": \"2023-03-25T02:53:36.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ahmet Barut\",\n    \"password\": \"12345\",\n    \"password_confirmation\": \"12345\",\n    \"email\": \"ahmetb2@f.cp\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ahmet Barut\",\n    \"password\": \"12345\",\n    \"password_confirmation\": \"12345\",\n    \"email\": \"ahmetb2@f.cp\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 02:53:36 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 02:53:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjNhMWY1MDZhMzIwZjAwNDA5MjEwNTU5YjBmNWM2MTA5YjBhZDJlN2FjMmU2NzFmMjQyNzgyNDE1OGZjOTVkM2JjMTlmOTkxYTIwZDdiN2YiLCJpYXQiOjE2Nzk3MTI4MTYuMDQzNTU3LCJuYmYiOjE2Nzk3MTI4MTYuMDQzNTU3LCJleHAiOjE3MTEzMzUyMTYuMDQwODM4LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.jXsNbJo2xgUnXJSPGB-K9nRQ2ewkECPW0eNHlNhEIuruFRAFULttXqC28S6jhV8JWmyFU1P7bqpOK4cbs9WDbWTBXE0-GDqUe2579ceRp49GH-IFRnDUHNJ4Fe8yWkcU8Z4Iz3nnaZndc6TKxMwjbFXPHxkYkr1onXg8Ns4kMgC7tuDxs8E77nZEODF4fqULL0Y5jDYKa49EKnTFG94y5rFR6ochUZoGyq4LKgMFfOlan9ZKBRnOqXh_UVWAm95CL9SQ9LMc0ift-0gOK-sn1p0ElEaCgygyUiHME_O2eEbORgFphOyZI43pMVhdZ9JpUgcZ-5ysJGFzgRVnGpAAwcgDOYPi-TKnBPAzMIuJz89CPCh6xMQf-ZK76odHbYDBfKWJvXfAtAU9PruVVKDD2OxQ2xDVn3g7sdyE7iiceRzNqMUNvJSMdyDV_wnWMjrKL-Vx4eK5orxxin3LAXo0WDAfSp8Xn8nGw3UDsfso2khvXohRC9XcFotU8A18oKUw5vi2TOpUwyaTRmjQb9PLTQVjyItkZBsOkayP1UHon4Bub6jqNeNSoLtG8K9o-4inLV-JI-vDRwP3w2UOp13PWAA7RoQz-begtquSoR9TZZdtkhIX7cpw-wkf_LA6HcmaWZqgUHqPDDBETBARZYq4TKz1ZhWr6UOoame3-mZ0Jzw\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ahmetb2@f.cp\",\n    \"password\": \"12345\" \n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ahmetb2@f.cp\",\n    \"password\": \"12345\" \n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 02:55:38 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 02:55:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWIxY2Q0MzgwMmQ5OWM3MjhiMGNmNzI1ZjViNGQ0ZjY5ZTlkMjQyODI3Njk5ZmQxNjMyMjEzZGY1ODEyZjZlZTM3MTIxNGFkYmM2Njg1MWYiLCJpYXQiOjE2Nzk3MTI5MzguMzUyNjY3LCJuYmYiOjE2Nzk3MTI5MzguMzUyNjY4LCJleHAiOjE3MTEzMzUzMzguMzUxNjQ3LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.hK2gQ2feD23G2Ifl4uroTmjOpEqa5cj7HGT4t4fQ-zOKlUJPQeeSCxfQGmgheRi2oPxQCYKkCXts3bNK8IwzpaAUtjcUJpD-Couoc6oxbbvT7GKISBSY8jQ02BXXLplXTZedZ86jTqUkST-9EpzRQIeKBsDuFr8FNIzghM3d5JF7cjaCv80IgrSKBgkkK857TRZSVe7ByYhL6M7GwWeZBX9Gm7Lq7AwdLN_M7Jn5D96SVLQGxwOF2ZnB3vt-G_pF7tE9rt-4WVlJdvjBYq-BWLSBxxSZQIoIEi18eoXyYUbcPRfadmIQRVcTLMtF7d2sbFGymCW6rDnzUt9YA16nBILFNos_6pPF1lFN_WFP_mbB80gkZDGsyNWiCZr4Hvv9i-NpCwRM1r5uZXM-Nrtx19MbLnDaD3RK_ikpaa2W_oCbIdBFKjGwtv7ZGhLdXP3MW12TE9wefJ8C2m91P5dlGw80-tdpChh6dUzWqZtDfeHAN7LcSZ_SijxM6ft0QkBLICOEdKY0w4V-YJ2GpBaelBlVlrKgk6pTn_rZlLHF3LOMRzG21AciKVsbb6yafZX30tq0cbZRyGkaShtFKMyJi6BUn_HEAiC0dYjSSqgAtu5a8POYst9PMqaMyseST96ETdPnsajILifzJE1LSfNkI16Fl5PSD3eViq12WkwCdPA\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWIxY2Q0MzgwMmQ5OWM3MjhiMGNmNzI1ZjViNGQ0ZjY5ZTlkMjQyODI3Njk5ZmQxNjMyMjEzZGY1ODEyZjZlZTM3MTIxNGFkYmM2Njg1MWYiLCJpYXQiOjE2Nzk3MTI5MzguMzUyNjY3LCJuYmYiOjE2Nzk3MTI5MzguMzUyNjY4LCJleHAiOjE3MTEzMzUzMzguMzUxNjQ3LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.hK2gQ2feD23G2Ifl4uroTmjOpEqa5cj7HGT4t4fQ-zOKlUJPQeeSCxfQGmgheRi2oPxQCYKkCXts3bNK8IwzpaAUtjcUJpD-Couoc6oxbbvT7GKISBSY8jQ02BXXLplXTZedZ86jTqUkST-9EpzRQIeKBsDuFr8FNIzghM3d5JF7cjaCv80IgrSKBgkkK857TRZSVe7ByYhL6M7GwWeZBX9Gm7Lq7AwdLN_M7Jn5D96SVLQGxwOF2ZnB3vt-G_pF7tE9rt-4WVlJdvjBYq-BWLSBxxSZQIoIEi18eoXyYUbcPRfadmIQRVcTLMtF7d2sbFGymCW6rDnzUt9YA16nBILFNos_6pPF1lFN_WFP_mbB80gkZDGsyNWiCZr4Hvv9i-NpCwRM1r5uZXM-Nrtx19MbLnDaD3RK_ikpaa2W_oCbIdBFKjGwtv7ZGhLdXP3MW12TE9wefJ8C2m91P5dlGw80-tdpChh6dUzWqZtDfeHAN7LcSZ_SijxM6ft0QkBLICOEdKY0w4V-YJ2GpBaelBlVlrKgk6pTn_rZlLHF3LOMRzG21AciKVsbb6yafZX30tq0cbZRyGkaShtFKMyJi6BUn_HEAiC0dYjSSqgAtu5a8POYst9PMqaMyseST96ETdPnsajILifzJE1LSfNkI16Fl5PSD3eViq12WkwCdPA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}

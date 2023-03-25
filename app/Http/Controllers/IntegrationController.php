@@ -45,7 +45,7 @@ class IntegrationController extends Controller
 
         return response()->json([
             'message' => 'Integration updated successfully',
-        ], 204);
+        ], 201);
     }
 
     /**
@@ -63,6 +63,6 @@ class IntegrationController extends Controller
 
         return response()->json([
             'message' => 'Integration deleted successfully',
-        ], 204);
+        ], 201);
     }
 }
