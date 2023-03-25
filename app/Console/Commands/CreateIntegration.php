@@ -20,7 +20,7 @@ class CreateIntegration extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Yeni bir entegrasyon oluşturur';
 
     public function __construct(protected IntegrationContract $integrationRepository)
     {
