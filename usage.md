@@ -21,9 +21,11 @@ Kullanıma hoşgeldiniz. Bu bölümde API'nin nasıl kullanılacağını bulacak
 Projenin endpointleri aşağıdaki gibidir:
 
 ### Register
+`POST` `BASE_URL/api/register`
 
 Bu endpoint, yeni bir kullanıcı oluşturmak için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
-`POST BASE_URL/api/register`**Request**
+
+**Request**
 
 ```json
 {
@@ -48,8 +50,11 @@ Başarılı olması durumunda `access_token`'ı alacaksınız. Bu token ile diğ
 
 ### Login
 
+`POST` `BASE_URL/api/login`
+
 Bu endpoint, kullanıcı girişi yapmak için kullanılır. Başarılı durumlarda 200 dönerken başarısız durumlarda 422 döner.
-`POST BASE_URL/api/login`**Request**
+
+**Request**
 
 ```json
 {
@@ -70,8 +75,10 @@ Bu endpoint, kullanıcı girişi yapmak için kullanılır. Başarılı durumlar
 
 ### Yeni Entegrasyon Ekleme
 
+`POST` `BASE_URL/api/integrations`
+
 Bu endpoint, yeni bir entegrasyon eklemek için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
-`POST BASE_URL/api/integrations`**Request**
+**Request**
 
 ```json
 {
@@ -97,9 +104,10 @@ Bu endpoint, yeni bir entegrasyon eklemek için kullanılır. Başarılı duruml
 ```
 
 ### Entegrasyon Güncelleme
+`PUT` `BASE_URL/api/integrations/{id}`
 
 Bu endpoint, entegrasyon güncellemek için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
-`PUT BASE_URL/api/integrations/{id}`**Request**
+**Request**
 
 ```json
 {
@@ -125,9 +133,10 @@ Bu endpoint, entegrasyon güncellemek için kullanılır. Başarılı durumlarda
 ```
 
 ### Entegrasyon Silme
+`DELETE` `BASE_URL/api/integrations/{id}`
 
 Bu endpoint, entegrasyon silmek için kullanılır. Başarılı durumlarda 204 dönerken başarısız durumlarda 422 döner.
-`DELETE BASE_URL/api/integrations/{id}`**Response***204*
+**Response***204*
 
 ## Komutlar
 
