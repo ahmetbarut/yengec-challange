@@ -16,92 +16,75 @@ Kullanıma hoşgeldiniz. Bu bölümde API'nin nasıl kullanılacağını bulacak
 
 
 #### [Postman Collection](yengec-postman-collection.json)
+## Endpointler
 
-## API
+Projenin endpointleri aşağıdaki gibidir:
 
-*HEADER*
-```http request
-Accept: application/json
-Content-Type: application/json
+### Register
+
+Bu endpoint, yeni bir kullanıcı oluşturmak için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
+`POST BASE_URL/api/register`**Request**
+
 ```
-> HTTP Başlıklarını eklemezseniz hatalı mesajları göremezsiniz.
-
-## Register
-Yeni bir kullanıcı oluşturmak için kullanılır. Başarılı durumlarda 201 döner. Başarısız durumlarda 422 döner.
-
-*`POST`*
-
-*BASE_URL*`/api/register`
-
-**Request**
-
-```json
 {
     "name": "string",
     "email": "string",
     "password": "string",
     "password_confirmation": "string"
 }
+
 ```
 
-**Response**
-_201_
-```json
+**Response** *201*
+
+```
 {
     "access_token": "string"
 }
+
 ```
 
-Başarılı olması durumunda `access_token`'ı alacaksınız. Bu token ile diğer isteklerde kullanacaksınız.
+Başarılı olması durumunda `access_token`'ı alacaksınız. Bu token ile diğer isteklerde kullanabilirsiniz.
 
-## Login
+### Login
 
-Kullanıcı girişi yapmak için kullanılır. Başarılı durumlarda 200 döner. Başarısız durumlarda 422 döner.
+Bu endpoint, kullanıcı girişi yapmak için kullanılır. Başarılı durumlarda 200 dönerken başarısız durumlarda 422 döner.
+`POST BASE_URL/api/login`**Request**
 
-*`POST`*
-
-*BASE_URL*`/api/login`
-
-**Request**
-
-```json
+```
 {
     "email": "string",
     "password": "string"
 }
+
 ```
 
-**Response**
-_200_
-```json
+**Response***200*
+
+```
 {
     "access_token": "string"
 }
+
 ```
 
+### Yeni Entegrasyon Ekleme
 
-## Yeni Entegrasyon Ekleme
+Bu endpoint, yeni bir entegrasyon eklemek için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
+`POST BASE_URL/api/integrations`**Request**
 
-Yeni bir entegrasyon eklemek için kullanılır. Başarılı durumlarda 201 döner. Başarısız durumlarda 422 döner.
-
-*`POST`*
-
-*BASE_URL*`/api/integrations`
-
-**Request**
-
-```json
+```
 {
     "marketpalce": "string",
     "name": "string",
     "password": "string"
 }
+
 ```
 
-**Response**
-_201_
+**Response** *201*
 
-```json
+```
 {
     "name": "string",
     "marketplace": "string",
@@ -110,30 +93,26 @@ _201_
     "created_at": "datetime",
     "id": "number"
 }
+
 ```
 
-## Entegrasyon Güncelleme
+### Entegrasyon Güncelleme
 
-Entegrasyon güncellemek için kullanılır. Başarılı durumlarda 201 döner. Başarısız durumlarda 422 döner.
+Bu endpoint, entegrasyon güncellemek için kullanılır. Başarılı durumlarda 201 dönerken başarısız durumlarda 422 döner.
+`PUT BASE_URL/api/integrations/{id}`**Request**
 
-*`PUT`*
-
-*BASE_URL*`/api/integrations/{id}`
-
-**Request**
-
-```json
+```
 {
     "marketpalce": "string",
     "name": "string",
     "password": "string"
 }
+
 ```
 
-**Response**
-_201_
+**Response***201*
 
-```json
+```
 {
     "name": "string",
     "marketplace": "string",
@@ -142,19 +121,31 @@ _201_
     "created_at": "datetime",
     "id": "number"
 }
+
 ```
 
-## Entegrasyon Silme
+### Entegrasyon Silme
 
-Entegrasyon silmek için kullanılır. Başarılı durumlarda 204 döner. Başarısız durumlarda 422 döner.
+Bu endpoint, entegrasyon silmek için kullanılır. Başarılı durumlarda 204 dönerken başarısız durumlarda 422 döner.
+`DELETE BASE_URL/api/integrations/{id}`**Response***204*
 
-*`DELETE`*
+## Commandlar
 
-*BASE_URL*`/api/integrations/{id}`
+Projenin bir diğer özelliği de entegrasyon ekleyen, çıkaran ve güncelleyen bir komut dosyası oluşturulmalıdır.
 
-**Response**
-_204_
+## Testler
 
+API testleri, unit testleri ve command testleri olmak üzere üç farklı kategoride testler oluşturulmalıdır. API testleri için Register servisinde girilen email adresi email adresi değilse hata verilmeli ve gerekli alanlardan name alanı girilmediğinde hata verilmeli. Unit testleri için entegrasyon ekleme, silme ve güncelleme işlemleri test edilmelidir. Command testleri ise entegrasyon ekleyen, çıkaran ve güncelleyen komut dosyası için oluşturulmalıdır.
+
+## Postman
+
+Proje için Postman API dökümanı hazırlanmalıdır. Ayrıca, Postman Collection hazırlanmalıdır.
+
+## Kurulum
+
+Son olarak, proje için bir kurulum klavuzu hazırlanmalıdır. Bu klavuz, projeyi kullanacak kişilerin proje kodunu nasıl çalıştıracağına dair detaylı bilgiler içermelidir.
+
+Sonuç olarak, projenin başarılı bir şekilde tamamlanabilmesi için öncelikle ön koşulların ve testlerin tamamının dikkatle incelenmesi gerekmektedir. Ayrıca, API dökümanı, Postman Collection ve kurulum klavuzu gibi ilgili dokümantasyonlar hazırlanmalıdır.
 
 ## Komutlar
 
